@@ -1,0 +1,84 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+>
+    <Dialog
+        title="BUYING THE PRODUCT"
+        id="buy_dialog"
+    >
+        <VBox class="sapUiMediumMargin">
+            <Label
+                text="First Name"
+                required="true"
+            />
+            <Input
+                type="Text"
+                required="true"
+            />
+
+            <Label text="Last Name" />
+            <Input type="Text" />
+
+            <Label text="Mobile Number" />
+            <Input
+                type="Number"
+                required="true"
+            />
+
+            <Label
+                text="Adress"
+                required="true"
+            />
+            <Input
+                type="Text"
+                required="true"
+                placeholder="Address Line 1"
+            />
+            <Input type="Number" required="true"/>
+
+            <Label
+                text="PIN Code"
+                required="true"
+            />
+            <Input
+                type="Number"
+                required="true"
+            />
+
+            <Label
+                text="City/state"
+                required="true"
+            />
+            <Input
+                type="Text"
+                required="true"
+              
+            />
+
+            
+            <Label
+                text="Country"
+                required="true"
+            />
+            <Input
+                type="Text"
+                placeholder="India"
+                
+            />
+
+        </VBox>
+
+        <beginButton>
+            <Button 
+            text="Buy Now"
+            press=".onConfirmProduct" />
+        </beginButton>
+
+        <endButton>
+            <Button
+                text="Close"
+                press=".cancel_buying"
+            />
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

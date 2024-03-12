@@ -1,0 +1,40 @@
+<mvc:View
+    xmlns:core="sap.ui.core"
+    controllerName="store.mobilestore.controller.MobileDetail"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+>
+    <Page title="{mobile>name}">
+        <HBox>
+            <Image
+                src="{mobile>productImage}"
+                width="150px"
+                height="200px"
+                class="sapUiMediumMargin"
+            />
+
+            <VBox class="sapUiSmallMargin">
+                <FormattedText
+                    htmlText="{/HTML}"
+                    class="sapUiLargeMargin"
+                />
+            </VBox>
+        </HBox>
+
+
+        <HBox
+            class="sapUiMediumMargin"
+            justifyContent="SpaceBetween"
+        >
+            <Text
+                class="t_text"
+                text="{mobile>price}"
+            />
+            <Text
+                class="t_text"
+                text="{mobile>color}"
+            />
+            <Button text="BUY Now" class="buy_btn" press=".onBuyProduct"/>
+        </HBox>
+    </Page>
+</mvc:View>

@@ -1,0 +1,240 @@
+html[dir="ltr"] .myAppDemoWT .myCustomButton.sapMBtn {
+    margin-right: 0.125rem
+ }
+ 
+ html[dir="rtl"] .myAppDemoWT .myCustomButton.sapMBtn {
+    margin-left: 0.125rem
+ }
+ 
+ .myAppDemoWT .myCustomText {
+    display: inline-block;
+    font-weight: bold;
+    
+ }
+
+ .centerTitle
+ {
+   text-align: center;
+ }
+ 
+
+ .sapUiTinyMargin sapUiMediumMarginTop centerTitle
+ {
+   text-align: center;
+   margin: 20px;
+   display: flex;
+   flex-direction: column;
+ }
+
+
+ /* .myAppDemoWT
+ {
+   background-color: 	#9966cc;
+
+ } */
+.input_form
+{
+   width: 50%;
+   margin: auto;
+
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: #fff;
+   margin-top: 80px;
+   margin-left: 300px;
+   border-radius: 20px;
+}
+
+
+.heading
+{
+   text-align: center;
+   padding: 5px;
+}
+
+
+.buttons
+{
+   text-align: center;
+}
+
+input,label
+{
+   padding: 5px;
+}
+
+
+.icons
+{
+   /* border: 2px solid black; */
+   width: 10%;
+}
+
+
+.mobile_data
+{
+   text-align : center;
+   font-weight: bold;
+   font-size: 20px;
+   color: white;
+   padding: 5px;
+}
+
+/* .nav_items
+{
+   border: 2px solid black;
+   height: 700px;
+   width: 5%;
+   margin-top: 50px;
+   margin-left: 20px;
+
+} */
+
+.custom_buttons
+{
+   width: 20%;
+}
+
+.cutom_button 
+{
+   margin: 30px;
+
+
+}
+
+.main_text
+{
+   font-size: 30px;
+   margin-top: 40px;
+   margin-left: 350px;
+}
+
+.list_items
+{
+   margin-top: 100px;
+   margin-left: 50px;
+   /* width: 500px; */
+   width: 1000px;
+   
+}
+
+.mobile_panel
+{
+   margin-left: 50px;
+   width: 800px;
+   padding: 20px;
+   border-radius: 20px;
+}
+
+.m_details
+{
+   padding: 60px;
+   /* width: 80%; */
+}
+
+.product_list
+{
+
+   border-radius: 20px;
+
+}
+
+.icons
+{
+   margin: 20px;
+   width: 90%;
+   border-radius: 20px;
+   /* background-color: rebeccapurple; */
+}
+
+.prd_list
+{
+   margin: 50px;
+}
+
+
+.icons_hbox
+{
+   margin-top: 10px;
+   padding: 5px;
+   
+}
+
+image{
+   border-radius: 50%;
+}
+
+.contact_icons
+{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+}
+
+/* #product_list
+{
+   margin-left: 200px;
+} */
+
+.nav_elements
+{
+   background-color: #fff;
+}
+
+.main_head_text
+{
+   font-size: 30px;
+   text-align: center;
+}
+
+.image_1
+{
+   margin-left: 25%;
+}
+
+.prd_list
+{
+   margin: 50px;
+}
+
+
+.buy_btn
+{
+   width: 100px;
+
+}
+
+.sapUiSmallMargin mob_details
+{
+   border-radius: 20px;
+}
+
+.t_text
+{
+   font-size: 20px;
+   font-weight: bold;
+}
+
+.buy_btn
+{
+   color: white;
+   margin-right: 60px;
+}
+.sapMBtnInner.sapMBtnHoverable.sapMFocusable.sapMBtnText.sapMBtnDefault
+{
+   background-color: red;
+   color: white;
+}
+
+.sapUiLargeMargin.signin_pop
+{
+   margin: 20px;
+}
+
+.nav_items
+{
+    padding-top : 30px;
+    padding-bottom: 30px;
+}

@@ -1,0 +1,38 @@
+
+<core:FragmentDefinition
+    xmlns="sap.m"
+
+
+    xmlns:core="sap.ui.core"
+>
+
+<Dialog 
+id="signin_dialog"
+title="Sign-in with your Credentials"
+>
+<VBox class="sapUiMediumMargin">
+
+<Label text="UserName:" required="true"></Label>
+<Input type="Text" id="username_signin_inpt" value="{signin_fei__M>/signin/username}"></Input>
+
+<Label text="Password" required="true"></Label>
+<Input type="Password" id="password_signin_inpt" value="{signin_fei__M>/signin/password}"></Input>
+
+
+
+
+
+</VBox>
+
+<beginButton>
+<Button id="lognin_btn" text="Login" press=".signin_success"></Button>
+</beginButton>
+
+<endButton>
+
+<Button text="Close" press=".collapse_signin"/>
+
+</endButton>
+</Dialog>
+
+</core:FragmentDefinition>

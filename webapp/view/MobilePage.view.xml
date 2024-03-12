@@ -1,0 +1,189 @@
+<mvc:View
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:tnt="sap.tnt"
+    controllerName="store.mobilestore.controller.MobilePage"
+>
+    <Page
+        title="Electronic Store"
+        enableScrolling="false"
+    >
+    <headerContent>
+    
+        <Text id="header_text" text="welcome  {signin_fei__M>/signin/username}" visible="false"></Text>
+        <Button id="header_btn" text="Logout" visible="false"   press=".onlogout"></Button>
+        
+    </headerContent>
+
+        <HBox height="100%">
+            <VBox
+                width="20%"
+                height="100%"
+                class="nav_elements"
+            >
+                <Image
+                    src="https://cdn3.vectorstock.com/i/1000x1000/34/07/smartphone-cartoon-shopping-at-store-vector-27233407.jpg"
+                    width="100px"
+                    height="100px"
+                    class="image_1"
+                />
+                <List id="nav_list"> 
+                    <StandardListItem
+                        type="Navigation"
+                        class="nav_items"
+                        title="Home"
+                        press=""
+                    />
+                    <StandardListItem
+                        type="Navigation"
+                        id="login_list_item"
+                        class="nav_items"
+                        title="Login"
+                        press=".load_signin"
+                    />
+                    <StandardListItem
+                        type="Navigation"
+                        class="nav_items"
+                        title="Contact Us"
+                        press=".contact_us"
+                    />
+                    <StandardListItem
+                        type="Navigation"
+                        class="nav_items"
+                        title="About"
+                        press=""
+                    />
+                    <StandardListItem
+                        type="Navigation"
+                        class="nav_items"
+                        title="Product"
+                        press=".products_pressed"
+                    />
+                </List>
+            </VBox>
+            <VBox
+                width="100%"
+                class="sapUiTinyMargin prd_list"
+            >
+                <FormattedText
+                    textAlign="Center"
+                    htmlText="Electronic Store: The House of Gadgets!"
+                    class="main_head_text"
+                />
+                <IconTabBar
+                    class="icons"
+                    select=".iconFilter"
+                >
+                    <items>
+                        <IconTabFilter
+                            showAll="true"
+                            text="ALL Products"
+                            icon="sap-icon://add"
+                            key=""
+                        />
+
+                        <IconTabFilter
+                            text="128GB"
+                            icon="https://w7.pngwing.com/pngs/542/886/png-transparent-visual-basic-computer-icons-rom-text-rectangle-logo-thumbnail.png"
+                            key="128"
+                        />
+                        <!-- <IconTabFilter
+                            text="64GB"
+                            icon="https://w7.pngwing.com/pngs/542/886/png-transparent-visual-basic-computer-icons-rom-text-rectangle-logo-thumbnail.png"
+                            key="64"
+                        /> -->
+
+                        <IconTabFilter
+                            text="900$"
+                            icon="sap-icon://loan"
+                            key= "900"
+                        />
+
+                       <IconTabFilter
+                            text="64GB"
+                            icon="https://w7.pngwing.com/pngs/542/886/png-transparent-visual-basic-computer-icons-rom-text-rectangle-logo-thumbnail.png"
+                            key="64"
+                        />
+
+                        <IconTabFilter
+                            text="750$"
+                            icon="sap-icon://waiver"
+                            key="750"
+                        />
+                    </items>
+
+                    <content>
+                        <Toolbar>
+                            <core:Icon src="sap-icon://add-filter" />
+                            <!-- <ToolbarSpacer /> -->
+                            <Title text="Apply Filters" />
+                            <ToolbarSpacer />
+                            <SearchField
+                                width="80%"
+                                search=".onFilterproducts"
+                            />
+                        </Toolbar>
+                    </content>
+                </IconTabBar>
+
+                <ScrollContainer
+                    height="600px"
+                    vertical="true"
+                    focusable="true"
+                    class="scroll_content"
+                >
+                    <List
+                        class="sapUiTinyMargin"
+                        headerText="PRODUCTS"
+                        items="{mobile>/}"
+                        id="products_list"
+                    >
+                        <items>
+                            <ObjectListItem
+                                title="{mobile>name}"
+                                icon="{mobile>productImage}"
+                                number="{mobile>price} $ "
+
+                           
+
+                                numberState="{
+                                    path : 'mobile>price',
+                                    formatter: '.formatter.fncolor'
+                                }"
+                                type="Navigation"
+                                press=".mobile_clicked"
+                                
+                            >
+                                 <firstStatus>
+                                <ObjectStatus 
+                                    text="{
+                                        path : 'mobile>price',
+                                        formatter : '.formatter.fnstatus'
+                                    }"
+                                />
+                                </firstStatus>
+                                <attributes>
+
+                                    <ObjectAttribute
+                                        text="Model Name: {mobile>name}"
+                                    />
+                                    <ObjectAttribute
+                                        text="Model Number :  {mobile>modelNumber}"
+                                    />
+                                    <ObjectAttribute
+                                        text="ROM : {mobile>ROM} GB"
+                                    />
+                                    <ObjectAttribute
+                                        text="Camera : {mobile>camera}"
+                                    />
+                                    <ObjectAttribute />
+                                </attributes>
+                            </ObjectListItem>
+                        </items>
+                    </List>
+                </ScrollContainer>
+            </VBox>
+        </HBox>
+    </Page>
+</mvc:View>

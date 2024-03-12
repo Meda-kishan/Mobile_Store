@@ -1,0 +1,77 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+
+<ScrollContainer width="100%" height="100%" 	vertical="true">
+    <Panel class="mobile_data">
+        <Text text="MOBILE DATA" />
+    </Panel>
+
+    <Table
+        id="mobile_table"
+        items="{mobile>/}"
+        class="sapUiMediumMagin"
+    >
+        <columns >
+            <Column>
+                <Text text="ID" />
+            </Column>
+
+            <Column>
+                <Text text="Name" />
+            </Column>
+
+            <Column>
+                <Text text="Color" />
+            </Column>
+
+            <Column>
+                <Text text="ROM" />
+            </Column>
+            <Column>
+                <Text text="Price" />
+            </Column>
+            <Column>
+                <Text text="ModeName" />
+            </Column>
+
+            <Column>
+                <Text text="ModelNumber" />
+            </Column>
+
+            <Column>
+                <Text text="Size" />
+            </Column>
+
+            <Column>
+                <Text text="Camera" />
+            </Column>
+
+            <Column>
+                <Text text="Image" />
+            </Column>
+
+
+        </columns>
+
+        <items>
+            <ColumnListItem>
+                <ObjectIdentifier title="{mobile>id}" />
+                <Text text="{mobile>name}" />
+                <Text text="{mobile>color}" />
+                <Text text="{mobile>ROM}" />
+                <Text text="{mobile>price}" />
+                <Text text="{mobile>modeName}" />
+                <Text text="{mobile>modelNumber}" />
+                <Text text="{mobile>size}" />
+                <Text text="{mobile>camera}" />
+                <Image src="{mobile>productImage}" width="100px" height="100px" />
+      
+            </ColumnListItem>
+        </items>
+    </Table>
+
+
+    </ScrollContainer>
+</mvc:View>

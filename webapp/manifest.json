@@ -1,0 +1,178 @@
+{
+  "_version": "1.59.0",
+  "sap.app": {
+    "id": "store.mobilestore",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.12.5",
+      "toolsId": "e6f16586-813f-4829-ac2b-4d1da54287b5"
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.121.1",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "store.mobilestore.i18n.i18n"
+        }
+      },
+			"invoice": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "Invoices.json"
+			},
+
+			"mobile" : {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "Mobile.json"
+			}
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "store.mobilestore.view",
+        "controlAggregation": "pages",
+        "controlId": "app",
+        "clearControlAggregation": false
+      },
+      "routes": [
+
+         {
+          "pattern": "",
+          "name": "mobilepage",
+          "target": "mobilepage"
+          },
+          {
+          "pattern": "detail/{invoicePath}",
+          "name": "detail",
+          "target": "detail"
+          },
+  
+          {
+            "pattern": "mobiledetail/{mobilePath}",
+            "name": "mobiledetail",
+            "target" :  "mobiledetail"
+          },
+  
+          {
+          "pattern": "mobilelist",
+          "name": "mobilelist",
+          "target": "MobileList"
+          },
+  
+    
+  
+          {
+          "pattern": "registered",
+          "name" : "registered",
+          "target" : "registered"
+          }
+  
+          
+      ],
+      "targets": {
+        "overview": {
+          "viewId": "overview",
+          "viewName": "Overview"
+          },
+          "detail": {
+          "viewId": "detail",
+          "viewName": "Detail"
+          },
+          
+          "mobiledetail" :{
+          "viewId": "mobiledetail",
+          "viewName": "MobileDetail"
+          },
+          
+          "layout":{
+  
+          "viewId": "Layout",
+          "viewName": "layout"
+          },
+  
+          "registered" :{
+  
+          "viewId": "registered",
+          "viewName": "registered"
+          },
+  
+          "main" :{
+  
+          "viewId": "main",
+          "viewName": "MobileList"
+          },
+  
+          "mobilepage":{
+  
+          "viewId": "MobilePage",
+          "viewName": "MobilePage",
+          "viewType": "XML"
+          },
+  
+          "MobileList":
+          {
+          "viewId": "MobileList",
+          "viewName": "MobileList"
+          }
+          
+      }
+    },
+    "rootView": {
+      "viewName": "store.mobilestore.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}
